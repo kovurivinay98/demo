@@ -3,10 +3,10 @@ userid=$(id -u)
 if [ $userid -eq 0 ]
  then
    echo "Your are root user"
-    dnf list installed nginx
+    dnf list installed apache
      if [ $? -ne 0 ]
       then
-        dnf install nginx -y
+        dnf install apache -y
           if [ $? -eq 0 ]
              then 
                 echo "Installed successfully"
