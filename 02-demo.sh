@@ -3,15 +3,15 @@ userid=$(id -u)
 if [ $userid -eq 0 ]
  then
    echo "Your are root user"
-    dnf list installed apache
+    dnf list installed tomcat
      if [ $? -ne 0 ]
       then
-        dnf install apache -y
+        dnf install tomcat -y
           if [ $? -eq 0 ]
              then 
                 echo "Installed successfully"
              else
-                echo "Not Installed succesfully"
+                echo "Installation failed"
             fi
        else
         echo "nginx already installed"
