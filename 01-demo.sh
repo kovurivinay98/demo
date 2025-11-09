@@ -3,8 +3,8 @@ userid=$(id -u)
 
 if [ $userid -eq 0 ]
 then
-echo "you are root user"
+ echo "you are root user"
+dnf install nginx -y
 else
- dnf install nginx -y
-echo "you are not root user"
+ echo "you are not root user"
 fi
